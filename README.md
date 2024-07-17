@@ -1,0 +1,3 @@
+Just a normal atm like software for navigating across all the required featured.
+Made it for fun so that i can hone my oop skills in python.
+Learned about a diffent keyword named "self" which imitates "this" keyword functionality used in other languages like javascript, cpp etc.
