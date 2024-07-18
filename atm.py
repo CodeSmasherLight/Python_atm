@@ -2,12 +2,12 @@ class Atm:
 
     def __init__(self):
 
-        self.pin = ""
-        self.balance = 0
+        self.__pin = ""
+        self.__balance = 0
 
-        self.menu()
+        self.__menu()
 
-    def menu(self):
+    def __menu(self):
 
         user_input = input(""" 
               Hello! So what you gonna do?
@@ -30,24 +30,24 @@ class Atm:
             print("bye")
 
     def create_pin(self):
-        self.pin = input("Create Pin")
+        self.__pin = input("Create Pin")
         print("Pin set successfully")
 
     def deposit_amt(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter the amount"))
-            self.balance = self.balance + amount
+            self.__balance = self.__balance + amount
             print("Deposit Successful")
         else:
             print("invalid pin!!")    
 
     def withdraw_amt(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter the amount"))
             if amount < self.balance:
-                self.balance = self.balance - amount
+                self.__balance = self.__balance - amount
                 print("Withdraw Successful")
             else:
                 print("Insufficient balance")    
@@ -56,8 +56,8 @@ class Atm:
     
     def check_balance(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
-            print(self.balance)
+        if temp == self.__pin:
+            print(self.__balance)
         else:
             print("invalid pin!!")   
 
